@@ -1,4 +1,4 @@
-import { MutationResolvers } from "../../../types.generated";
+import { MutationResolvers } from "../../../types.generated.js";
 
 const deleteUser: MutationResolvers["deleteUser"] = async (
   _parent,

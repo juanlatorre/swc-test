@@ -4,13 +4,13 @@ import * as typescriptResolvers from "@graphql-codegen/typescript-resolvers";
 import { codegen } from "@graphql-codegen/core";
 import { getCachedDocumentNodeFromSchema } from "@graphql-codegen/plugin-helpers";
 import { promises } from "fs";
-import { schema } from "./modules";
+import { schema } from "./modules/index.js";
 
 export default async function () {
   const config: typescript.TypeScriptPluginConfig &
     typescriptResolvers.TypeScriptResolversPluginConfig = {
     enumsAsTypes: true,
-    contextType: "./context#GraphQLContext",
+    contextType: "./context.js#GraphQLContext",
     scalars: {
       DateTime: "string | Date",
       EmailAddress: "string",

@@ -1,11 +1,11 @@
-import { ENV, HOST, PORT, logger } from "./env";
+import { ENV, HOST, PORT, logger } from "./env.js";
 import fastify, { FastifyReply, FastifyRequest } from "fastify";
 
 import GraphQLVoyagerFastify from "graphql-voyager-fastify-plugin";
-import codegen from "./codegen";
-import context from "./context";
+import codegen from "./codegen.js";
+import context from "./context.js";
 import { createServer } from "@graphql-yoga/node";
-import { schema } from "./modules";
+import { schema } from "./modules/index.js";
 import { useDisableIntrospection } from "@envelop/disable-introspection";
 
 const app = fastify({ logger });

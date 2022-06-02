@@ -1,6 +1,6 @@
-import { Resolvers } from "../../../types.generated";
-import user from "./user";
-import users from "./users";
+import { Resolvers } from "../../../types.generated.js";
+import user from "./user.js";
+import users from "./users.js";
 
 const query: Resolvers = {
   Query: {
